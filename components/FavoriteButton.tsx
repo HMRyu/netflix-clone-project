@@ -22,10 +22,13 @@ const FavoriteButton: React.FC<FavoriteButtonProps> = ({ movieId }) => {
   const toggleFavorites = useCallback(async () => {
     let response;
 
+    /** 현재 버전에서는 query string 으로 데이터 송수신 */
     if (isFavorite) {
-      response = await axios.delete("/api/favorite", { data: { movieId } });
+      response = await axios.delete(`/api/favorite?movieId=${movieId}`);
+      // response = await axios.delete("/api/favorite", { data: { movieId } });
     } else {
-      response = await axios.post("/api/favorite", { movieId });
+      // response = await axios.post("/api/favorite", { movieId });
+      response = await axios.post(`/api/favorite?movieId=${movieId}`);
     }
 
     const updatedFavoriteIds = response?.data?.favoriteIds;
