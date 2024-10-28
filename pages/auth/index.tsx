@@ -1,49 +1,23 @@
-import axios from 'axios';
 import Input from '@/components/Input';
-import { useCallback, useState } from 'react';
+import useAuthLogic from '../hooks/useAuthLogic';
+
 import { signIn } from 'next-auth/react';
 import { FcGoogle } from 'react-icons/fc';
 import { FaGithub } from 'react-icons/fa';
 
 const Auth = () => {
-  const [email, setEmail] = useState('');
-  const [name, setName] = useState('');
-  const [password, setPassword] = useState('');
-
-  const [variant, setVariant] = useState('login');
-
-  const toggleVariant = useCallback(() => {
-    setVariant((currentVariant) =>
-      currentVariant === 'login' ? 'register' : 'login',
-    );
-  }, []);
-
-  const login = useCallback(async () => {
-    try {
-      await signIn('credentials', {
-        email,
-        password,
-        redirect: false,
-        callbackUrl: '/profiles',
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  }, [email, password]);
-
-  const register = useCallback(async () => {
-    try {
-      await axios.post('/api/register', {
-        email,
-        name,
-        password,
-      });
-
-      login();
-    } catch (error) {
-      console.log(error);
-    }
-  }, [email, name, password]);
+  const {
+    email,
+    name,
+    password,
+    variant,
+    setEmail,
+    setName,
+    setPassword,
+    toggleVariant,
+    handleLogin,
+    handleRegister,
+  } = useAuthLogic();
 
   return (
     <div className="relative h-full w-full bg-[url('/images/hero.jpeg')] bg-no-repeat bg-center bg-fixed bg-cover">
@@ -81,7 +55,7 @@ const Auth = () => {
               />
             </div>
             <button
-              onClick={variant === 'login' ? login : register}
+              onClick={variant === 'login' ? handleLogin : handleRegister}
               className="bg-red-600 py-3 text-white rounded-md w-full mt-10 hover:bg-red-700 transition"
             >
               {variant === 'login' ? 'Login' : 'Sign up'}
