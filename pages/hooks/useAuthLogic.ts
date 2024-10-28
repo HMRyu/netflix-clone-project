@@ -1,7 +1,7 @@
 import { useCallback, useState } from 'react';
 
-import { login } from '../auth/helpers/login';
-import { register } from '../auth/helpers/register';
+import { login } from '../auth/_helpers/login';
+import { register } from '../auth/_helpers/register';
 import { AuthType } from '../types/auth/auth';
 
 const useAuthLogic = () => {
