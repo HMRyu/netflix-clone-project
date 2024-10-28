@@ -1,12 +1,12 @@
-import { NextApiRequest, NextApiResponse } from "next";
+import { NextApiRequest, NextApiResponse } from 'next';
 
-import serverAuth from "@/lib/serverAuth";
+import serverAuth from '@/lib/serverAuth';
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse
+  res: NextApiResponse,
 ) {
-  if (req.method !== "GET") {
+  if (req.method !== 'GET') {
     return res.status(405).end();
   }
 
