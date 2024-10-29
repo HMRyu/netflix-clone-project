@@ -6,7 +6,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>StreamFlix</title>
+        <title>Netflix</title>
         <link rel="icon" href="/images/favicon-logo.png" />
       </Head>
       <Component {...pageProps} />
