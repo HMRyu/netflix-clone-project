@@ -1,4 +1,4 @@
-import useAuthLogic from '../hooks/useAuthLogic';
+import useAuthLogic from '../../hooks/useAuthLogic';
 import AuthForm from './_components/AuthForm';
 import AuthLogo from './_components/AuthLogo';
 import AuthHeader from './_components/AuthHeader';

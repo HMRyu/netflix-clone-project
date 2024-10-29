@@ -10,7 +10,7 @@ interface MovieCardProps {
   data: Record<string, any>;
 }
 
-const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
+const MovieCard = ({ data }: MovieCardProps) => {
   const router = useRouter();
   const { openModal } = useInfoModal();
 

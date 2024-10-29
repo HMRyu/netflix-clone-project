@@ -1,8 +1,8 @@
 import { useCallback, useState } from 'react';
 
-import { login } from '../auth/_helpers/login';
-import { register } from '../auth/_helpers/register';
-import { AuthType } from '../types/auth/auth';
+import { login } from '../pages/auth/_helpers/login';
+import { register } from '../pages/auth/_helpers/register';
+import { AuthType } from '../pages/types/auth/auth';
 
 const useAuthLogic = () => {
   const [email, setEmail] = useState<string>('');

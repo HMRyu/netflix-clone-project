@@ -4,7 +4,7 @@ interface MobileMenuProps {
   visible?: boolean;
 }
 
-const MobileMenu: React.FC<MobileMenuProps> = ({ visible }) => {
+const MobileMenu = ({ visible }: MobileMenuProps) => {
   if (!visible) {
     return null;
   }
