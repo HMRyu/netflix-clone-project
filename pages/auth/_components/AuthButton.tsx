@@ -2,8 +2,8 @@ import { AuthType } from '@/types/auth/auth';
 
 interface AuthButtonProps {
   variant: AuthType;
-  handleLogin: () => Promise<void>;
-  handleRegister: () => Promise<void>;
+  handleLogin: () => void;
+  handleRegister: () => void;
 }
 
 const AuthButton = ({
