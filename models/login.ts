@@ -5,7 +5,6 @@ const login = async (email: string, password: string) => {
     await signIn('credentials', {
       email,
       password,
-      redirect: false,
       callbackUrl: '/profiles',
     });
   } catch (error) {

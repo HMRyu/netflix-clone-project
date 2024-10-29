@@ -21,14 +21,8 @@ export default NextAuth({
       id: 'credentials',
       name: 'Credentials',
       credentials: {
-        email: {
-          label: 'Email',
-          type: 'text',
-        },
-        password: {
-          label: 'Password',
-          type: 'password',
-        },
+        email: { label: 'Email', type: 'text' },
+        password: { label: 'Password', type: 'password' },
       },
       async authorize(credentials) {
         if (!credentials?.email || !credentials?.password) {
@@ -36,9 +30,7 @@ export default NextAuth({
         }
 
         const user = await prismadb.user.findUnique({
-          where: {
-            email: credentials.email,
-          },
+          where: { email: credentials.email },
         });
 
         if (!user || !user.hashedPassword) {
@@ -49,7 +41,6 @@ export default NextAuth({
           credentials.password,
           user.hashedPassword
         );
-
         if (!isCorrectPassword) {
           throw new Error('Incorrect password');
         }
