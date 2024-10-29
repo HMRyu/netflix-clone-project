@@ -25,21 +25,27 @@ const AuthForm = ({
       {variant === 'register' && (
         <Input
           label="Username"
-          onChange={(ev: any) => setName(ev.target.value)}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setName(e.target.value)
+          }
           id="name"
           value={name}
         />
       )}
       <Input
         label="Email"
-        onChange={(ev: any) => setEmail(ev.target.value)}
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+          setEmail(e.target.value)
+        }
         id="email"
         type="email"
         value={email}
       />
       <Input
         label="Password"
-        onChange={(ev: any) => setPassword(ev.target.value)}
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+          setPassword(e.target.value)
+        }
         id="password"
         type="password"
         value={password}

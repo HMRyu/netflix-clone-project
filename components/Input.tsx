@@ -1,14 +1,12 @@
-import React from 'react';
-
 interface InputProps {
   id: string;
-  onChange: any;
+  onChange: React.ChangeEventHandler<HTMLInputElement>;
   value: string;
   label: string;
   type?: string;
 }
 
-const Input: React.FC<InputProps> = ({ id, onChange, value, label, type }) => {
+const Input = ({ id, onChange, value, label, type }: InputProps) => {
   return (
     <div className="relative">
       <input
