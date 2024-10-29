@@ -1,5 +1,5 @@
 import Input from '@/components/Input';
-import { AuthType } from '@/pages/types/auth/auth';
+import { AuthType } from '@/types/auth/auth';
 
 interface AuthFormProps {
   variant: AuthType;

@@ -1,6 +1,6 @@
 import { signIn } from 'next-auth/react';
 
-export const login = async (email: string, password: string) => {
+const login = async (email: string, password: string) => {
   try {
     await signIn('credentials', {
       email,
@@ -12,3 +12,5 @@ export const login = async (email: string, password: string) => {
     console.error(error);
   }
 };
+
+export default login;

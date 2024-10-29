@@ -1,5 +1,5 @@
 import MovieCard from './MovieCard';
-import { Movie } from '@/pages/types/movie/movie';
+import { Movie } from '@/types/movie/movie';
 
 import { isEmpty } from 'lodash';
 

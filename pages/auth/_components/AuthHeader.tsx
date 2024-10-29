@@ -1,4 +1,4 @@
-import { AuthType } from '@/pages/types/auth/auth';
+import { AuthType } from '@/types/auth/auth';
 
 const AuthHeader = ({ variant }: { variant: AuthType }) => {
   return (

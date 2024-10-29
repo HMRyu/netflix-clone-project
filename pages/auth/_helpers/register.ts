@@ -1,12 +1,8 @@
-import { login } from './login';
+import login from './login';
 
 import axios from 'axios';
 
-export const register = async (
-  email: string,
-  name: string,
-  password: string
-) => {
+const register = async (email: string, name: string, password: string) => {
   try {
     await axios.post('/api/register', { email, name, password });
     await login(email, password);
@@ -14,3 +10,5 @@ export const register = async (
     console.error(error);
   }
 };
+
+export default register;
