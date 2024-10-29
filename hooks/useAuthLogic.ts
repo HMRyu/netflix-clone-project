@@ -1,8 +1,8 @@
 import { useCallback, useState } from 'react';
 import { useRouter } from 'next/navigation';
 
-import login from '@/pages/auth/login';
-import signup from '@/pages/auth/signup';
+import login from '@/pages/models/login';
+import signup from '@/pages/models/signup';
 import { AuthType } from '../types/auth/auth';
 
 const useAuthLogic = () => {
