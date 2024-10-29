@@ -3,12 +3,13 @@ import { useRouter } from 'next/router';
 
 import FavoriteButton from './FavoriteButton';
 import useInfoModal from '@/hooks/useInfoModal';
+import { Movie } from '@/pages/types/movie/movie';
 
 import { BsFillPlayFill } from 'react-icons/bs';
 import { BiChevronDown } from 'react-icons/bi';
 
 interface MovieCardProps {
-  data: Record<string, any>;
+  data: Movie;
 }
 
 const MovieCard = ({ data }: MovieCardProps) => {

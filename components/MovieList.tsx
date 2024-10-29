@@ -1,11 +1,12 @@
 import React from 'react';
 
 import MovieCard from './MovieCard';
+import { Movie } from '@/pages/types/movie/movie';
 
 import { isEmpty } from 'lodash';
 
 interface MovieListProps {
-  data: Record<string, any>[];
+  data: Movie[];
   title: string;
 }
 

@@ -22,7 +22,7 @@ const AccountMenu = ({ visible }: AccountMenuProps) => {
           <img
             className="w-8 rounded-md"
             src="/images/default-blue.png"
-            alt=""
+            alt="default profile"
           />
           <p className="text-white text-sm group-hover/item:underline">
             {data?.name}

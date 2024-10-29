@@ -9,7 +9,7 @@ import { AiOutlineClose } from 'react-icons/ai';
 
 interface InfoModalProps {
   visible?: boolean;
-  onClose: any;
+  onClose: () => void;
 }
 
 const InfoModal = ({ visible, onClose }: InfoModalProps) => {
