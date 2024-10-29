@@ -1,5 +1,3 @@
-import React from 'react';
-
 import useCurrentUser from '@/hooks/useCurrentUser';
 
 import { signOut } from 'next-auth/react';

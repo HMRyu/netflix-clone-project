@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 import PlayButton from './PlayButton';
 import FavoriteButton from './FavoriteButton';

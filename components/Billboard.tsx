@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import { useCallback } from 'react';
 
 import useBillboard from '@/hooks/useBillboard';
 import PlayButton from './PlayButton';
