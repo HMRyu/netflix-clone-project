@@ -1,9 +1,10 @@
-import axios from 'axios';
 import React, { useCallback, useMemo } from 'react';
-import { AiOutlinePlus, AiOutlineCheck } from 'react-icons/ai';
 
 import useCurrentUser from '@/hooks/useCurrentUser';
 import useFavorites from '@/hooks/useFavorites';
+
+import axios from 'axios';
+import { AiOutlinePlus, AiOutlineCheck } from 'react-icons/ai';
 
 interface FavoriteButtonProps {
   movieId: string;

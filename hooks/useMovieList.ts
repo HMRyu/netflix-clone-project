@@ -1,4 +1,5 @@
 import fetcher from '@/lib/fetcher';
+
 import useSWR from 'swr';
 
 const useMovieList = () => {
