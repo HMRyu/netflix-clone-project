@@ -1,8 +1,8 @@
 import { useCallback, useState } from 'react';
 import { useRouter } from 'next/navigation';
 
-import login from '@/pages/api/auth/login';
-import register from '@/pages/api/auth/register';
+import login from '@/pages/api/login';
+import signup from '@/pages/api/signup';
 import { AuthType } from '../types/auth/auth';
 
 const useAuthLogic = () => {
@@ -25,7 +25,7 @@ const useAuthLogic = () => {
   }, [email, password]);
 
   const handleRegister = useCallback(async () => {
-    await register(email, name, password);
+    await signup(email, name, password);
     router.push('/');
   }, [email, name, password]);
 
