@@ -1,11 +1,11 @@
 import useAuthLogic from '../../hooks/useAuthLogic';
-import AuthForm from './_components/AuthForm';
-import AuthLogo from './_components/AuthLogo';
-import AuthHeader from './_components/AuthHeader';
-import AuthButton from './_components/AuthButton';
-import AuthSocials from './_components/AuthSocials';
-import AuthFooter from './_components/AuthFooter';
-import AuthTestUser from './_components/AuthTestUser';
+import AuthForm from '../../components/auth/AuthForm';
+import AuthLogo from '../../components/auth/AuthLogo';
+import AuthHeader from '../../components/auth/AuthHeader';
+import AuthButton from '../../components/auth/AuthButton';
+import AuthSocials from '../../components/auth/AuthSocials';
+import AuthFooter from '../../components/auth/AuthFooter';
+import AuthTestUser from '../../components/auth/AuthTestUser';
 
 const Auth = () => {
   const {
