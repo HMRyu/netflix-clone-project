@@ -7,7 +7,7 @@ interface AuthFooterProps {
 
 const AuthFooter = ({ variant, toggleVariant }: AuthFooterProps) => {
   return (
-    <p className="text-neutral-500 mt-12">
+    <p className="text-neutral-500 mt-12 text-center">
       {variant === 'login'
         ? 'First time using Netflix?'
         : 'Already have an account?'}
