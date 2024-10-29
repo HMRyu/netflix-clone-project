@@ -5,6 +5,7 @@ import AuthHeader from './_components/AuthHeader';
 import AuthButton from './_components/AuthButton';
 import AuthSocials from './_components/AuthSocials';
 import AuthFooter from './_components/AuthFooter';
+import AuthTestUser from './_components/AuthTestUser';
 
 const Auth = () => {
   const {
@@ -42,6 +43,7 @@ const Auth = () => {
               handleRegister={handleRegister}
             />
             <AuthSocials />
+            <AuthTestUser />
             <AuthFooter variant={variant} toggleVariant={toggleVariant} />
           </div>
         </div>

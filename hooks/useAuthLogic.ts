@@ -1,4 +1,5 @@
 import { useCallback, useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 import { login } from '../pages/auth/_helpers/login';
 import { register } from '../pages/auth/_helpers/register';
@@ -10,6 +11,8 @@ const useAuthLogic = () => {
   const [password, setPassword] = useState<string>('');
   const [variant, setVariant] = useState<AuthType>('login');
 
+  const router = useRouter();
+
   const toggleVariant = useCallback(() => {
     setVariant((currentVariant) =>
       currentVariant === 'login' ? 'register' : 'login'
@@ -18,10 +21,12 @@ const useAuthLogic = () => {
 
   const handleLogin = useCallback(async () => {
     await login(email, password);
+    router.push('/');
   }, [email, password]);
 
   const handleRegister = useCallback(async () => {
     await register(email, name, password);
+    router.push('/');
   }, [email, name, password]);
 
   return {
