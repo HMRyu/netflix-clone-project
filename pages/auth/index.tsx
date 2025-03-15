@@ -8,18 +8,8 @@ import AuthFooter from '../../components/auth/AuthFooter';
 import AuthTestUser from '../../components/auth/AuthTestUser';
 
 const Auth = () => {
-  const {
-    email,
-    name,
-    password,
-    variant,
-    setEmail,
-    setName,
-    setPassword,
-    toggleVariant,
-    handleLogin,
-    handleRegister,
-  } = useAuthLogic();
+  const { email, name, password, variant, setEmail, setName, setPassword, toggleVariant, handleLogin, handleRegister } =
+    useAuthLogic();
 
   return (
     <div className="relative h-full w-full bg-[url('/images/hero.jpeg')] bg-no-repeat bg-center bg-fixed bg-cover">
@@ -37,11 +27,7 @@ const Auth = () => {
               setName={setName}
               setPassword={setPassword}
             />
-            <AuthButton
-              variant={variant}
-              handleLogin={handleLogin}
-              handleRegister={handleRegister}
-            />
+            <AuthButton variant={variant} handleLogin={handleLogin} handleRegister={handleRegister} />
             <AuthSocials />
             <AuthTestUser />
             <AuthFooter variant={variant} toggleVariant={toggleVariant} />

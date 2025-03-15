@@ -16,19 +16,13 @@ const AuthTestUser = () => {
     <div className="flex flex-col items-center mt-10 text-white">
       <div className="flex items-center gap-x-3">
         <div>test id : testUser@test.com</div>
-        <div
-          className="cursor-pointer"
-          onClick={() => handleCopy('testUser@test.com', setCopiedEmail)}
-        >
+        <div className="cursor-pointer" onClick={() => handleCopy('testUser@test.com', setCopiedEmail)}>
           {copiedEmail ? <Check /> : <Copy />}
         </div>
       </div>
       <div className="flex items-center gap-x-3">
         <div>test pw : testUser</div>
-        <div
-          className="cursor-pointer"
-          onClick={() => handleCopy('testUser', setCopiedPassword)}
-        >
+        <div className="cursor-pointer" onClick={() => handleCopy('testUser', setCopiedPassword)}>
           {copiedPassword ? <Check /> : <Copy />}
         </div>
       </div>

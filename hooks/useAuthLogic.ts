@@ -14,9 +14,7 @@ const useAuthLogic = () => {
   const router = useRouter();
 
   const toggleVariant = useCallback(() => {
-    setVariant((currentVariant) =>
-      currentVariant === 'login' ? 'register' : 'login'
-    );
+    setVariant((currentVariant) => (currentVariant === 'login' ? 'register' : 'login'));
   }, []);
 
   const handleLogin = useCallback(async () => {

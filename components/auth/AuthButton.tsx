@@ -6,11 +6,7 @@ interface AuthButtonProps {
   handleRegister: () => void;
 }
 
-const AuthButton = ({
-  variant,
-  handleLogin,
-  handleRegister,
-}: AuthButtonProps) => {
+const AuthButton = ({ variant, handleLogin, handleRegister }: AuthButtonProps) => {
   return (
     <button
       onClick={variant === 'login' ? handleLogin : handleRegister}
